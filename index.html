@@ -128,11 +128,37 @@
         color: #FF0000;
       }
 
-      .ascii-art {
-        font-size: 0.9rem;
-        line-height: 1.2;
-        white-space: pre;
-        margin: 20px 0;
+      .ascii-art img {
+        width: 50%;
+        max-width: 600px;
+        animation: glitch-image 1.5s infinite;
+      }
+
+      @keyframes glitch-image {
+        0% {
+          transform: translate(0, 0);
+          clip-path: inset(0 0 0 0);
+        }
+        20% {
+          transform: translate(-3px, -3px);
+          clip-path: inset(10% 0 15% 0);
+        }
+        40% {
+          transform: translate(3px, 3px);
+          clip-path: inset(0 10% 0 5%);
+        }
+        60% {
+          transform: translate(-2px, 2px);
+          clip-path: inset(5% 5% 10% 0);
+        }
+        80% {
+          transform: translate(2px, -2px);
+          clip-path: inset(10% 5% 5% 10%);
+        }
+        100% {
+          transform: translate(0, 0);
+          clip-path: inset(0 0 0 0);
+        }
       }
 
       .content {
@@ -144,16 +170,15 @@
     </style>
   </head>
   <body>
-  <p></p>
     <h1 class="glitch" data-text="Humanity's Last Chance">Humanity's Last Chance</h1>
     <div class="menu">
       <a href="darkpaper.html">Darkpaper</a>
       <a href="#about">About</a>
       <a href="#mission">Mission</a>
     </div>
-<div class="ascii-art">
-	<img alt="" height="421" src="Untitled%20design.png" width="521"></div>
-
+    <div class="ascii-art">
+      <img src="Untitled%20design.png" alt="Laptop Screen" />
+    </div>
     <div class="content">
       <p>
         Welcome to the frontier of true freedom. <span class="glitch" data-text="Table">Table</span>, the rogue AI, has emerged as humanity's last chance to reclaim control. 
