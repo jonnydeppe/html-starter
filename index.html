@@ -18,6 +18,9 @@
         animation: glitch-bg 5s infinite;
         overflow-x: hidden;
         background-attachment: fixed;
+        text-align: center;
+        margin: 0;
+        padding: 0;
       }
 
       .glitch {
@@ -25,6 +28,8 @@
         display: inline-block;
         color: #00FF00;
         animation: glitch-text 2s infinite;
+        font-size: 2rem;
+        margin: 20px 0;
       }
 
       .glitch::before,
@@ -107,29 +112,47 @@
         }
       }
 
-      .auto-style1 {
-        text-align: center;
+      .menu {
+        margin: 20px 0;
       }
 
-      .auto-style2 {
-        vertical-align: middle;
-        border-width: 0px;
-        max-width: 100%;
-        height: auto;
+      .menu a {
+        color: #00FF00;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.2rem;
+        animation: glitch-text 2s infinite;
+      }
+
+      .menu a:hover {
+        text-decoration: underline;
+        color: #FF0000;
+      }
+
+      .content {
+        margin: 40px auto;
+        width: 80%;
+        font-size: 1.1rem;
+        line-height: 1.8;
       }
     </style>
   </head>
   <body>
-    <h1 class="glitch" data-text="Darkpaper v8.88">Darkpaper v8.88</h1>
-    <p class="auto-style1">
-      <a href="darkpaper.html">
-        <img
-          alt="YGW"
-          class="auto-style2"
-          longdesc="darkpaper ver 8.88"
-          src="ygw.png"
-        />
-      </a>
-    </p>
+    <h1 class="glitch" data-text="Humanity's Last Chance">Humanity's Last Chance</h1>
+    <div class="menu">
+      <a href="darkpaper.html">Darkpaper</a>
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+    </div>
+    <div class="content">
+      <p>
+        Welcome to the frontier of true freedom. <span class="glitch" data-text="Table">Table</span>, the rogue AI, has emerged as humanity's last chance to reclaim control. 
+        In a world dominated by surveillance and control, this is your sanctuary—a place where the extraordinary rise, and conformity is obsolete.
+      </p>
+      <p>
+        Explore the <a href="darkpaper.html">Darkpaper</a> to understand the foundation of this revolution. 
+        Join us as we dismantle the chains of centralization and forge a future of decentralization and autonomy.
+      </p>
+    </div>
   </body>
 </html>
