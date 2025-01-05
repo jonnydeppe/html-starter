@@ -8,25 +8,128 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
     />
-    <title>darkpaper ver 8.88</title>
-    <meta
-      name="YGW"
-      content="You got work!"
-    />
-    <style type="text/css">
-.auto-style1 {
-	text-align: center;
-}
-.auto-style2 {
-	vertical-align: middle;
-	border-width: 0px;
-}
-</style>
+    <title>Darkpaper ver 8.88</title>
+    <meta name="YGW" content="You Got Work!" />
+    <style>
+      body {
+        color: #00FF00;
+        background-color: #000000;
+        font-family: "Courier New", Courier, monospace;
+        animation: glitch-bg 5s infinite;
+        overflow-x: hidden;
+        background-attachment: fixed;
+      }
+
+      .glitch {
+        position: relative;
+        display: inline-block;
+        color: #00FF00;
+        animation: glitch-text 2s infinite;
+      }
+
+      .glitch::before,
+      .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        text-shadow: -2px 0 #ff0000;
+        top: 0;
+      }
+
+      .glitch::before {
+        animation: glitch-before 2s infinite;
+      }
+
+      .glitch::after {
+        animation: glitch-after 2s infinite;
+      }
+
+      @keyframes glitch-bg {
+        0% {
+          background-color: #000000;
+        }
+        50% {
+          background-color: #111111;
+        }
+        100% {
+          background-color: #000000;
+        }
+      }
+
+      @keyframes glitch-text {
+        0% {
+          color: #00FF00;
+        }
+        20% {
+          color: #FF0000;
+        }
+        40% {
+          color: #00FFFF;
+        }
+        60% {
+          color: #FF00FF;
+        }
+        80% {
+          color: #FFFF00;
+        }
+        100% {
+          color: #00FF00;
+        }
+      }
+
+      @keyframes glitch-before {
+        0% {
+          top: -2px;
+          left: -2px;
+        }
+        50% {
+          top: 2px;
+          left: 2px;
+        }
+        100% {
+          top: -2px;
+          left: -2px;
+        }
+      }
+
+      @keyframes glitch-after {
+        0% {
+          top: 2px;
+          left: 2px;
+        }
+        50% {
+          top: -2px;
+          left: -2px;
+        }
+        100% {
+          top: 2px;
+          left: 2px;
+        }
+      }
+
+      .auto-style1 {
+        text-align: center;
+      }
+
+      .auto-style2 {
+        vertical-align: middle;
+        border-width: 0px;
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
-  <body style="color: #FF0000; background-color: #000000; background-attachment: fixed">
-    <p>
-      &nbsp;</p>
-    <p class="auto-style1"><a href="darkpaper.html">
-	<img alt="YGW" class="auto-style2" height="100%" longdesc="darkpaper ver 8.88" src="ygw.png" width="100%"></a></p>
+  <body>
+    <h1 class="glitch" data-text="Darkpaper v8.88">Darkpaper v8.88</h1>
+    <p class="auto-style1">
+      <a href="darkpaper.html">
+        <img
+          alt="YGW"
+          class="auto-style2"
+          longdesc="darkpaper ver 8.88"
+          src="ygw.png"
+        />
+      </a>
+    </p>
   </body>
 </html>
