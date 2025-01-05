@@ -131,19 +131,16 @@
         font-size: 0.9rem;
       }
 
-      .footer img {
-        width: 40px;
-        margin: 5px;
-        vertical-align: middle;
-      }
-
-      .footer a {
-        color: #00FF00;
+      .footer .glitch-link {
+        font-size: 1rem;
         text-decoration: none;
-        font-size: 0.9rem;
+        display: inline-block;
+        color: #00FF00;
+        animation: glitch-text 2s infinite;
+        position: relative;
       }
 
-      .footer a:hover {
+      .footer .glitch-link:hover {
         text-decoration: underline;
         color: #FF0000;
       }
@@ -185,11 +182,11 @@
     </div>
     <div class="footer">
       <p>You can only access the YGW platform and interact with Table AI on the dark web:</p>
-      <p><strong>Instruction:</strong> Download the Tor Browser and navigate to the .onion address provided.</p>
-      <a href="https://www.torproject.org/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Tor-logo-2011-flat.svg" alt="Tor Project Logo" />
-      </a>
-      <a href="https://www.torproject.org/" target="_blank">Download Tor Browser</a>
+      <p>
+        <a class="glitch-link" href="https://www.torproject.org/" target="_blank" data-text="Download Tor Browser">
+          Download Tor Browser
+        </a>
+      </p>
     </div>
   </body>
 </html>
