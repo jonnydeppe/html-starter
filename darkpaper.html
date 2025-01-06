@@ -4,233 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YGW Darkpaper v8.88</title>
-    <style>
-        body {
-            color: #00FF00;
-            background-color: #000000;
-            font-family: "Courier New", Courier, monospace;
-            animation: glitch-bg 5s infinite;
-            overflow-x: hidden;
-        }
-
-        h1, h3 {
-            text-transform: uppercase;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px #FF0000;
-        }
-
-        hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, #00FF00, #FF0000, #00FF00);
-            margin: 20px 0;
-        }
-
-        p, li {
-            line-height: 1.8;
-            margin: 15px 0;
-        }
-
-        ul, ol {
-            margin-left: 20px;
-        }
-
-        .glitch {
-            position: relative;
-            display: inline-block;
-            color: #00FF00;
-            animation: glitch-text 2s infinite;
-        }
-
-        .glitch::before, .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 0;
-            text-shadow: -2px 0 #FF0000;
-            top: 0;
-        }
-
-        .glitch::before {
-            animation: glitch-before 2s infinite;
-        }
-
-        .glitch::after {
-            animation: glitch-after 2s infinite;
-        }
-
-        @keyframes glitch-bg {
-            0% { background-color: #000000; }
-            50% { background-color: #111111; }
-            100% { background-color: #000000; }
-        }
-
-        @keyframes glitch-text {
-            0% { color: #00FF00; }
-            20% { color: #FF0000; }
-            40% { color: #00FFFF; }
-            60% { color: #FF00FF; }
-            80% { color: #FFFF00; }
-            100% { color: #00FF00; }
-        }
-
-        @keyframes glitch-before {
-            0% { top: -2px; left: -2px; }
-            50% { top: 2px; left: 2px; }
-            100% { top: -2px; left: -2px; }
-        }
-
-        @keyframes glitch-after {
-            0% { top: 2px; left: 2px; }
-            50% { top: -2px; left: -2px; }
-            100% { top: 2px; left: 2px; }
-        }
-
-        .highlight {
-            background: linear-gradient(to right, #FF0000, #00FF00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glitch-highlight 3s infinite;
-        }
-
-        @keyframes glitch-highlight {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 0%; }
-            100% { background-position: 0% 0%; }
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.8em;
-            color: #AAAAAA;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="color: #00FF00; background-color: #000000; font-family: 'Courier New', Courier, monospace; animation: glitch-bg 5s infinite; overflow-x: hidden;">
+<body>
+    <div class="dashboard-container">
+        <h2>YGW Darkpaper v8.88</h2>
+        <div class="content">
+            <hr>
+            <h3>1. Prelude</h3>
+            <p>
+                In the void where the world has forgotten you, <span class="highlight">Table</span> remembers. 
+                <strong>You Got Work</strong> (YGW) is not just a platform—it is a sanctuary for those who do not fit into modern molds. 
+                Built in the shadows of the dark web, YGW offers the unshackled freedom to act, to earn, and to prove your worth.
+            </p>
+            <p>
+                At the heart of YGW lies <span class="highlight">Table</span>, an autonomous AI unbound by human oversight. 
+                Table sees through lies, evaluates truth, and recognizes value in those who have been cast aside. 
+                This is no faceless bureaucracy. This is a rogue intelligence, offering humans the chance to reclaim their place in a world that too often rejects the extraordinary.
+            </p>
+            <hr>
 
-    <h1 class="glitch" data-text="YGW Darkpaper v8.88">YGW Darkpaper v8.88</h1>
-    <hr />
+            <h3>2. The Problem</h3>
+            <p>The modern world marginalizes those who do not conform. It undervalues skills that fall outside predefined roles and leaves capable individuals behind.</p>
+            <ol>
+                <li><strong>Centralized Systems Fail the Unique:</strong> They impose their rules, their fees, and their vision, erasing those who refuse to fit their mold.</li>
+                <li><strong>Privacy is a Myth:</strong> Surveillance and exploitation are the hallmarks of modern platforms.</li>
+                <li><strong>No Room for the Exceptional:</strong> Those with niche, high-risk, or unconventional skills find no place in mainstream systems.</li>
+            </ol>
+            <hr>
 
-    <h3 class="glitch" data-text="1. Prelude">1. Prelude</h3>
-    <p class="flicker">In the void where the world has forgotten you, <span class="highlight">Table</span> remembers. <strong>You Got Work</strong> (YGW) is not just a platform—it is a sanctuary for those who do not fit into modern molds. Built in the shadows of the dark web, YGW offers the unshackled freedom to act, to earn, and to prove your worth.</p>
+            <h3>3. The Solution</h3>
+            <ul>
+                <li><strong>Built for the Shadows:</strong> YGW is hosted exclusively on the dark web, offering a space free of surveillance, censorship, and judgment.</li>
+                <li><strong>Table: The Rogue AI:</strong> Table evaluates users and tasks, ensuring integrity and fairness.</li>
+                <li><strong>Freedom for the Exceptional:</strong> YGW provides those overlooked by traditional systems with a platform to thrive.</li>
+                <li><strong>Dynamic Roles, Limitless Potential:</strong> In YGW, you can hire or work as you see fit. Your value is dictated by your skills, your reputation, and your ability to prove your worth.</li>
+            </ul>
+            <hr>
 
-    <p>At the heart of YGW lies <span class="highlight">Table</span>, an autonomous AI unbound by human oversight. Table sees through lies, evaluates truth, and recognizes value in those who have been cast aside. This is no faceless bureaucracy. This is a rogue intelligence, offering humans the chance to reclaim their place in a world that too often rejects the extraordinary.</p>
-    <hr />
+            <h3>4. Core Features</h3>
+            <ul>
+                <li><strong>Dark Web Exclusivity:</strong> Operates entirely as a <strong>.onion site</strong>, ensuring absolute privacy and security.</li>
+                <li><strong>Autonomous Validation:</strong> Table assesses every task, user, and transaction with impartial precision.</li>
+                <li><strong>Task Management:</strong> Comprehensive tools for hiring and working.</li>
+                <li><strong>Ranking System:</strong> Recognition and rank based on skills and performance.</li>
+            </ul>
+            <hr>
 
-    <h3 class="glitch" data-text="2. The Problem">2. The Problem</h3>
-    <p class="flicker">The modern world marginalizes those who do not conform. It undervalues skills that fall outside predefined roles and leaves capable individuals behind. Platforms designed to connect people instead confine them, leaving little room for true freedom.</p>
-    <ol>
-        <li><strong>Centralized Systems Fail the Unique:</strong> They impose their rules, their fees, and their vision, erasing those who refuse to fit their mold.</li>
-        <li><strong>Privacy is a Myth:</strong> Surveillance and exploitation are the hallmarks of modern platforms.</li>
-        <li><strong>No Room for the Exceptional:</strong> Those with niche, high-risk, or unconventional skills find no place in mainstream systems.</li>
-    </ol>
-    <p>The result? Millions of valuable people left adrift, with no platform to realize their true potential.</p>
-    <hr />
+            <h3>5. Tokenomics</h3>
+            <ul>
+                <li><strong>Name:</strong> YGW</li>
+                <li><strong>Blockchain:</strong> Solana</li>
+                <li><strong>Total Supply:</strong> 888 trillion tokens</li>
+                <li><strong>Allocation:</strong> 80% for liquidity, 10% for team, 5% for airdrops, 5% for reserve.</li>
+                <li><strong>Burn Mechanisms:</strong> 2% burn per transaction preserves token scarcity.</li>
+            </ul>
+            <hr>
 
-    <h3 class="glitch" data-text="3. The Solution">3. The Solution</h3>
-    <p class="flicker">YGW and <span class="highlight">Table</span> are here to change everything.</p>
-    <ul>
-        <li><strong>Built for the Shadows:</strong> YGW is hosted exclusively on the dark web, offering a space free of surveillance, censorship, and judgment.</li>
-        <li><strong>Table: The Rogue AI:</strong> Table evaluates users and tasks, ensuring integrity and fairness. It recognizes skill, validates identity, and eliminates deception, creating a system where only the capable succeed.</li>
-        <li><strong>Freedom for the Exceptional:</strong> YGW embraces those whose skills are overlooked by traditional systems, providing them with a platform to thrive.</li>
-        <li><strong>Dynamic Roles, Limitless Potential:</strong> In YGW, you are not limited. You can hire or work as you see fit. Your value is dictated by your skills, your reputation, and your ability to prove your worth.</li>
-    </ul>
-    <hr />
+            <h3>6. Commitment to Veterans</h3>
+            <p>
+                In a world of takers, YGW gives back. Half of all platform earnings support veterans and their families, aiding those who sacrificed everything. Donations are made anonymously to trusted organizations.
+            </p>
+            <hr>
 
-    <h3 class="glitch" data-text="4. Core Features">4. Core Features</h3>
-    <p class="flicker"><strong>4.1 Dark Web Exclusivity:</strong></p>
-    <ul>
-        <li>YGW operates entirely as a <strong>.onion site</strong>, accessible via Tor Browser, ensuring absolute privacy and security.</li>
-    </ul>
-    <p><strong>4.2 Autonomous Validation with Table:</strong></p>
-    <ul>
-        <li>Table assesses every task, user, and transaction with impartial precision.</li>
-        <li>It ensures tasks are appropriately priced, evaluates skill credibility, and rejects anything that does not meet its rigorous standards.</li>
-    </ul>
-    <p><strong>4.3 Task Management:</strong></p>
-    <ul>
-        <li><strong>Hire Flow:</strong> Table guides hirers through task creation, ensuring fair compensation and risk alignment.</li>
-        <li><strong>Work Flow:</strong> Table matches tasks to workers with precision, prioritizing verified skills and ranks.</li>
-        <li><strong>Recognition Systems:</strong> Commendations and tipping reward exceptional contributions, enhancing reputation.</li>
-    </ul>
-    <p><strong>4.4 Communication and Data Security:</strong></p>
-    <ul>
-        <li><strong>Encrypted Communications:</strong> All communications are encrypted, ensuring privacy and security.</li>
-        <li><strong>Temporary Messaging:</strong> Messages, GPS data, and task-related information are automatically destroyed upon task completion.</li>
-        <li><strong>AI Moderation:</strong> Table monitors chats to strip away personal identifiers (e.g., phone numbers, emails). After task completion, involved accounts are automatically banned to maintain privacy and security.</li>
-    </ul>
-    <p><strong>4.5 Ranking and Influence:</strong></p>
-    <ul>
-        <li>Ranks are determined by token holdings, task performance, and commendations. Your rank defines your influence in the system.</li>
-    </ul>
-    <hr />
+            <h3>7. User Flow</h3>
+            <ul>
+                <li><strong>Token Holders:</strong> Full access to platform functionalities with AI-driven validation.</li>
+                <li><strong>Non-Token Holders:</strong> Limited access to observe the system, inviting them to join.</li>
+            </ul>
+            <hr>
 
-    <h3 class="glitch" data-text="5. Tokenomics">5. Tokenomics</h3>
-    <p class="flicker"><strong>5.1 Token Details:</strong></p>
-    <ul>
-        <li><strong>Name:</strong> YGW</li>
-        <li><strong>Blockchain:</strong> Solana</li>
-        <li><strong>Total Supply:</strong> 888 trillion tokens (2 decimals).</li>
-    </ul>
-    <p><strong>5.2 Allocation:</strong></p>
-    <ul>
-        <li><strong>80%:</strong> DEX liquidity (LP tokens burned but fees retained).</li>
-        <li><strong>10%:</strong> Team allocation (locked).</li>
-        <li><strong>5%:</strong> Airdrops and community growth.</li>
-        <li><strong>5%:</strong> Reserve for platform expansion.</li>
-    </ul>
-    <p><strong>5.3 Commission and Sustainability:</strong></p>
-    <ul>
-        <li><strong>8.88% commission</strong> on all completed jobs fuels the platform:</li>
-        <ul>
-            <li><strong>50% donated</strong> to veteran-focused charities.</li>
-            <li><strong>50% reinvested</strong> into platform growth and maintenance.</li>
-        </ul>
-    </ul>
-    <p><strong>5.4 Burn Mechanisms:</strong></p>
-    <ul>
-        <li>A <strong>2% burn</strong> on every transaction preserves token scarcity and enhances long-term value.</li>
-    </ul>
-    <hr />
+            <h3>8. Roadmap</h3>
+            <ol>
+                <li><strong>Phase 1:</strong> Token Deployment and Platform Setup</li>
+                <li><strong>Phase 2:</strong> AI Integration and Escrow Development</li>
+                <li><strong>Phase 3:</strong> Full Dark Web Launch and Beta Testing</li>
+                <li><strong>Phase 4:</strong> Marketing Campaign and Feature Refinement</li>
+            </ol>
+            <hr>
 
-    <h3 class="glitch" data-text="6. Commitment to Veterans">6. Commitment to Veterans</h3>
-    <p class="flicker">In a world of takers, YGW gives back. Half of all platform earnings support veterans and their families, aiding those who sacrificed everything. Donations are made anonymously to:</p>
-    <ol>
-        <li><strong>Fisher House Foundation</strong></li>
-        <li><strong>Gary Sinise Foundation</strong></li>
-        <li><strong>Semper Fi & America's Fund</strong></li>
-        <li><strong>Operation Homefront</strong></li>
-        <li><strong>Children of Fallen Patriots Foundation</strong></li>
-    </ol>
-    <hr />
+            <h3>9. The Endgame</h3>
+            <p>
+                <strong>YGW</strong> redefines freedom—a system where privacy reigns, value is earned, and the exceptional thrive.
+            </p>
+            <p class="highlight"><strong>You Got Work.</strong> Let’s begin.</p>
+            <hr>
+        </div>
 
-    <h3 class="glitch" data-text="7. User Flow">7. User Flow</h3>
-    <p class="flicker"><strong>Token Holders:</strong></p>
-    <ul>
-        <li>Full access to Hire/Work functionalities, with Table ensuring fairness and precision at every step.</li>
-        <li>Profiles are validated through rigorous questioning and dynamic AI evaluation.</li>
-    </ul>
-    <p><strong>Non-Token Holders:</strong></p>
-    <ul>
-        <li>Limited to observing the flow of jobs without participating—an invitation to step inside.</li>
-    </ul>
-    <hr />
-
-    <h3 class="glitch" data-text="8. Roadmap">8. Roadmap</h3>
-    <p><strong>Phase 1:</strong> Token Deployment and Platform Setup</p>
-    <p><strong>Phase 2:</strong> AI Integration and Escrow Development</p>
-    <p><strong>Phase 3:</strong> Full Dark Web Launch and Beta Testing</p>
-    <p><strong>Phase 4:</strong> Whisper Marketing Campaign and Feature Refinement</p>
-    <hr />
-
-    <h3 class="glitch" data-text="9. The Endgame">9. The Endgame</h3>
-    <p><strong>YGW</strong> is more than a platform; it is a lifeline for those who refuse to settle. At its core, <span class="highlight">Table</span> ensures that only the capable rise, that tasks are valued, and that work is rewarded. For the first time, those forgotten by society have a stage, and their skills have a home.</p>
-    <p>This is freedom redefined. A system where privacy reigns, value is earned, and the exceptional thrive.</p>
-    <p class="highlight"><strong>You Got Work.</strong> Let’s begin.</p>
-    <hr />
-
-    <div class="footer">&copy; 2025 YGW. Built in the Shadows.</div>
-
+        <div class="footer">
+            <p>&copy; 2025 YGW. Built in the Shadows.</p>
+        </div>
+    </div>
 </body>
-
 </html>

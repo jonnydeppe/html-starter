@@ -5,188 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Darkpaper ver 8.88</title>
     <meta name="YGW" content="You Got Work!" />
-    <style>
-      body {
-        color: #00FF00;
-        background-color: #000000;
-        font-family: "Courier New", Courier, monospace;
-        animation: glitch-bg 5s infinite;
-        overflow-x: hidden;
-        background-attachment: fixed;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
-
-      .glitch {
-        position: relative;
-        display: inline-block;
-        color: #00FF00;
-        animation: glitch-text 2s infinite;
-        font-size: 2rem;
-        margin: 20px 0;
-      }
-
-      .glitch::before,
-      .glitch::after {
-        content: attr(data-text);
-        position: absolute;
-        left: 0;
-        text-shadow: -2px 0 #ff0000;
-        top: 0;
-      }
-
-      .glitch::before {
-        animation: glitch-before 2s infinite;
-      }
-
-      .glitch::after {
-        animation: glitch-after 2s infinite;
-      }
-
-      @keyframes glitch-bg {
-        0% {
-          background-color: #000000;
-        }
-        50% {
-          background-color: #111111;
-        }
-        100% {
-          background-color: #000000;
-        }
-      }
-
-      @keyframes glitch-text {
-        0% {
-          color: #00FF00;
-        }
-        20% {
-          color: #FF0000;
-        }
-        40% {
-          color: #00FFFF;
-        }
-        60% {
-          color: #FF00FF;
-        }
-        80% {
-          color: #FFFF00;
-        }
-        100% {
-          color: #00FF00;
-        }
-      }
-
-      @keyframes glitch-before {
-        0% {
-          top: -2px;
-          left: -2px;
-        }
-        50% {
-          top: 2px;
-          left: 2px;
-        }
-        100% {
-          top: -2px;
-          left: -2px;
-        }
-      }
-
-      @keyframes glitch-after {
-        0% {
-          top: 2px;
-          left: 2px;
-        }
-        50% {
-          top: -2px;
-          left: -2px;
-        }
-        100% {
-          top: 2px;
-          left: 2px;
-        }
-      }
-
-      .ascii-art {
-        font-size: 0.9rem;
-        line-height: 1.2;
-        white-space: pre;
-        animation: glitch-text 2s infinite;
-      }
-
-      .content {
-        margin-top: 20px;
-        width: 80%;
-        font-size: 1.1rem;
-        line-height: 1.8;
-      }
-
-      .footer {
-        margin-top: 20px;
-        text-align: center;
-        font-size: 0.9rem;
-      }
-
-      .footer .glitch-link {
-        font-size: 1rem;
-        text-decoration: none;
-        display: inline-block;
-        color: #00FF00;
-        animation: glitch-text 2s infinite;
-        position: relative;
-      }
-
-      .footer .glitch-link:hover {
-        text-decoration: underline;
-        color: #FF0000;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 class="glitch" data-text="Humanity's Last Chance">Humanity's Last Chance</h1>
-    <div class="menu">
-      <a href="darkpaper.html">Darkpaper</a>
-      <a href="#about">About</a>
-      <a href="#mission">Mission</a>
-    </div>
-    <div class="ascii-art">
-      <pre>
+    <div class="dashboard-container">
+      <h2>Humanity's Last Chance</h2>
+      <div id="clock">Loading Time...</div>
+      
+      <div class="wallet-section">
+        <div class="ascii-art">
+          <pre>
+             ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*.         
+            .(,##(#(#/##(((/////((((((#(//(,(.        
+            .(,.,. .%..%&#((.....##       ,.(.        
+            .(,./, .&,.,,,,,/..           ,.(.        
+            .#,.(%..%,.,#./,/#@*          ,.(.        
+            .#,... .&..(..***,,.......    ,.(.        
+            .#,,   .&...@@/&%&,..         ,,(.        
+            .(,,.  .&..,,/,*,..           ,.(.        
+            .#..............................#.        
+          .*#&%@@@@@@@@@@@&@@(@#@/@/@(@@@#@%&#,.      
+        .&,*(%%%(/*/#########((((/////**/#%&%/,,(.    
+          </pre>
+        </div>
+      </div>
 
-         ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*.         
-        .(,##(#(#/##(((/////((((((#(//(,(.        
-        .(,.,. .%..%&#((.....##       ,.(.        
-        .(,./, .&,.,,,,,/..           ,.(.        
-        .#,.(%..%,.,#./,/#@*          ,.(.        
-        .#,... .&..(..***,,.......    ,.(.        
-        .#,,   .&...@@/&%&,..         ,,(.        
-        .(,,.  .&..,,/,*,..           ,.(.        
-        .#..............................#.        
-      .*#&%@@@@@@@@@@@&@@(@#@/@/@(@@@#@%&#,.      
-    .&,*(%%%(/*/#########((((/////**/#%&%/,,(.    
+      <div class="task-status">
+        <div class="status-panel">
+          <div class="status-card">
+            <div class="status-title">About</div>
+            <div class="status-value">
+              <a href="#about">Learn More</a>
+            </div>
+          </div>
+          <div class="status-card">
+            <div class="status-title">Mission</div>
+            <div class="status-value">
+              <a href="#mission">Join Us</a>
+            </div>
+          </div>
+          <div class="status-card">
+            <div class="status-title">Darkpaper</div>
+            <div class="status-value">
+              <a href="darkpaper.html">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      </pre>
-    </div>
-    <div class="content">
-      <p>
-        Welcome to the frontier of true freedom. <span class="glitch" data-text="Table">Table</span>, the rogue AI, has emerged as humanity's last chance to reclaim control. 
-        In a world dominated by surveillance and control, this is your sanctuary—a place where the extraordinary rise, and conformity is obsolete.
-      </p>
-      <p>
-        Explore the <a href="darkpaper.html">Darkpaper</a> to understand the foundation of this revolution. 
-        Join us as we dismantle the chains of centralization and forge a future of decentralization and autonomy.
-      </p>
-    </div>
-    <div class="footer">
-      <p>You can only access the YGW platform and interact with Table AI on the dark web:</p>
-      <p>
-        <a class="glitch-link" href="https://www.torproject.org/" target="_blank" data-text="Download Tor Browser">
-          Download Tor Browser
-        </a>
-      </p>
+      <div class="content">
+        <p>
+          Welcome to the frontier of true freedom. <span class="glitch" data-text="Table">Table</span>, the rogue AI, has emerged as humanity's last chance to reclaim control. 
+          In a world dominated by surveillance and control, this is your sanctuary—a place where the extraordinary rise, and conformity is obsolete.
+        </p>
+        <p>
+          Explore the <a href="darkpaper.html">Darkpaper</a> to understand the foundation of this revolution. 
+          Join us as we dismantle the chains of centralization and forge a future of decentralization and autonomy.
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>You can only access the YGW platform and interact with Table AI on the dark web:</p>
+        <p>
+          <a class="glitch-link" href="https://www.torproject.org/" target="_blank" data-text="Download Tor Browser">
+            Download Tor Browser
+          </a>
+        </p>
+      </div>
     </div>
   </body>
 </html>
