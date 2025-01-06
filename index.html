@@ -1,77 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darkpaper ver 8.88</title>
     <meta name="YGW" content="You Got Work!" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <style>
+        .dashboard-container {
+            font-family: Arial, sans-serif;
+            background-color: #1d1d1d;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .wallet-section, .task-control, .task-status {
+            margin-bottom: 20px;
+        }
+
+        .task-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .task-button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #333;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .task-button:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+
+        .task-button.disabled {
+            background-color: #666;
+            cursor: not-allowed;
+        }
+
+        .task-icon {
+            margin-right: 5px;
+        }
+
+        .status-panel {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .status-card {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 0 10px #4CAF50;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .status-card:hover {
+            box-shadow: 0 0 20px #4CAF50;
+        }
+
+        .status-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .status-value {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+
+        .features-panel button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #clock {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
     <div class="dashboard-container">
-      <h2>Humanity's Last Chance</h2>
-      <div id="clock">Loading Time...</div>
-      
-      <div class="wallet-section">
-        <div class="ascii-art">
-          <pre>
-             ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*.         
-            .(,##(#(#/##(((/////((((((#(//(,(.        
-            .(,.,. .%..%&#((.....##       ,.(.        
-            .(,./, .&,.,,,,,/..           ,.(.        
-            .#,.(%..%,.,#./,/#@*          ,.(.        
-            .#,... .&..(..***,,.......    ,.(.        
-            .#,,   .&...@@/&%&,..         ,,(.        
-            .(,,.  .&..,,/,*,..           ,.(.        
-            .#..............................#.        
-          .*#&%@@@@@@@@@@@&@@(@#@/@/@(@@@#@%&#,.      
-        .&,*(%%%(/*/#########((((/////**/#%&%/,,(.    
-          </pre>
+        <h2>Darkpaper ver 8.88</h2>
+        <div id="clock">12:00 PM</div>
+        <div class="wallet-section">
+            <div class="ascii-art">
+                <pre>
+                   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*.         
+                  .(,##(#(#/##(((/////((((((#(//(,(.        
+                  .(,.,. .%..%&#((.....##       ,.(.        
+                  .(,./, .&,.,,,,,/..           ,.(.        
+                  .#,.(%..%,.,#./,/#@*          ,.(.        
+                  .#,... .&..(..***,,.......    ,.(.        
+                  .#,,   .&...@@/&%&,..         ,,(.        
+                  .(,,.  .&..,,/,*,..           ,.(.        
+                  .#..............................#.        
+                .*#&%@@@@@@@@@@@&@@(@#@/@/@(@@@#@%&#,.      
+              .&,*(%%%(/*/#########((((/////**/#%&%/,,(.    
+                </pre>
+            </div>
         </div>
-      </div>
-
-      <div class="task-status">
+        <div class="content">
+            <p>
+                Welcome to the frontier of true freedom. Table, the rogue AI, has emerged as humanity's last chance to reclaim control. 
+                In a world dominated by surveillance and control, this is your sanctuary—a place where the extraordinary rise, and conformity is obsolete.
+            </p>
+            <p>
+                Explore the <a href="darkpaper.html">Darkpaper</a> to understand the foundation of this revolution. 
+                Join us as we dismantle the chains of centralization and forge a future of decentralization and autonomy.
+            </p>
+        </div>
         <div class="status-panel">
-          <div class="status-card">
-            <div class="status-title">About</div>
-            <div class="status-value">
-              <a href="#about">Learn More</a>
+            <div class="status-card">
+                <div class="status-title">About</div>
+                <div class="status-value">Learn More</div>
             </div>
-          </div>
-          <div class="status-card">
-            <div class="status-title">Mission</div>
-            <div class="status-value">
-              <a href="#mission">Join Us</a>
+            <div class="status-card">
+                <div class="status-title">Mission</div>
+                <div class="status-value">Our Goals</div>
             </div>
-          </div>
-          <div class="status-card">
-            <div class="status-title">Darkpaper</div>
-            <div class="status-value">
-              <a href="darkpaper.html">Explore</a>
+            <div class="status-card">
+                <div class="status-title">Darkpaper</div>
+                <div class="status-value">Explore</div>
             </div>
-          </div>
         </div>
-      </div>
-
-      <div class="content">
-        <p>
-          Welcome to the frontier of true freedom. <span class="glitch" data-text="Table">Table</span>, the rogue AI, has emerged as humanity's last chance to reclaim control. 
-          In a world dominated by surveillance and control, this is your sanctuary—a place where the extraordinary rise, and conformity is obsolete.
-        </p>
-        <p>
-          Explore the <a href="darkpaper.html">Darkpaper</a> to understand the foundation of this revolution. 
-          Join us as we dismantle the chains of centralization and forge a future of decentralization and autonomy.
-        </p>
-      </div>
-
-      <div class="footer">
-        <p>You can only access the YGW platform and interact with Table AI on the dark web:</p>
-        <p>
-          <a class="glitch-link" href="https://www.torproject.org/" target="_blank" data-text="Download Tor Browser">
-            Download Tor Browser
-          </a>
-        </p>
-      </div>
+        <div class="footer">
+            <p>You can only access the YGW platform and interact with Table AI on the dark web:</p>
+            <p>
+                <a href="https://www.torproject.org/" target="_blank">Download Tor Browser</a>
+            </p>
+        </div>
     </div>
-  </body>
+</body>
 </html>
