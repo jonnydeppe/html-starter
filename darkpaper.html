@@ -5,60 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YGW Darkpaper</title>
     <style>
-	/* General mobile responsiveness */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .form-container input,
-    .form-container button {
-        width: 100%;
-    }
-
-    #dashboard {
-        padding: 20px;
-    }
-
-    #dashboardUsername,
-    #dashboardWallet {
-        word-wrap: break-word;
-        font-size: 14px;
-    }
-
-    /* Adjust buttons */
-    button {
-        width: 100%;
-    }
-
-    .ai-chat-container {
-        width: 100%;
-    }
-
-    /* For arkanoid-specific layout adjustments */
-    .arkanoid-container {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .arkanoid-game {
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }
-}
-
+        /* General mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 14px;
+            }
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            .form-container input,
+            .form-container button {
+                width: 100%;
+            }
+            #dashboard {
+                padding: 20px;
+            }
+            #dashboardUsername,
+            #dashboardWallet {
+                word-wrap: break-word;
+                font-size: 14px;
+            }
+            button {
+                width: 100%;
+            }
+            .ai-chat-container {
+                width: 100%;
+            }
+            .arkanoid-container {
+                width: 100%;
+                padding: 15px;
+            }
+            .arkanoid-game {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
         body {
             background-color: #000000;
             color: #00FF00;
@@ -66,7 +54,6 @@
             margin: 0;
             padding: 0;
         }
-
         .glitch {
             position: relative;
             font-size: 4rem;
@@ -75,41 +62,34 @@
             margin-top: 50px;
             animation: glitch-text 2s infinite;
         }
-
         .glitch::before,
         .glitch::after {
             content: attr(data-text);
             position: absolute;
             left: 0;
         }
-
         .glitch::before {
             text-shadow: 2px 0 red;
             animation: glitch-before 2s infinite;
         }
-
         .glitch::after {
             text-shadow: -2px 0 cyan;
             animation: glitch-after 2s infinite;
         }
-
         @keyframes glitch-text {
             0%, 100% { color: #00FF00; }
             50% { color: #FF00FF; }
         }
-
         @keyframes glitch-before {
             0% { transform: translate(0, 0); }
             50% { transform: translate(-2px, -2px); }
             100% { transform: translate(0, 0); }
         }
-
         @keyframes glitch-after {
             0% { transform: translate(0, 0); }
             50% { transform: translate(2px, 2px); }
             100% { transform: translate(0, 0); }
         }
-
         nav {
             display: flex;
             justify-content: center;
@@ -119,7 +99,6 @@
             background: linear-gradient(to bottom, #111, #000);
             border-bottom: 2px solid #00FF00;
         }
-
         nav a {
             color: #00FF00;
             text-decoration: none;
@@ -129,41 +108,34 @@
             border-radius: 5px;
             transition: all 0.3s ease-in-out;
         }
-
         nav a:hover {
             background-color: #00FF00;
             color: #000000;
         }
-
         .showcase {
             text-align: center;
             margin: 50px auto;
             max-width: 80%;
             animation: fadeIn 3s ease-in-out;
         }
-
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(-20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-
         .showcase h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-
         .showcase p {
             font-size: 1.2rem;
             line-height: 1.6;
             color: #CCCCCC;
             margin-bottom: 20px;
         }
-
         .highlight {
             color: #FF00FF;
             font-weight: bold;
         }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -172,48 +144,21 @@
             border-top: 2px solid #00FF00;
             margin-top: 50px;
         }
-
         footer a {
             color: #00FF00;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
         }
-
         footer a:hover {
             color: #FF00FF;
         }
-
         .footer-text {
             font-size: 0.9rem;
             margin-top: 10px;
             color: #CCCCCC;
         }
-		/* General Nav Styling */
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 0;
-    margin: 0;
-    list-style: none;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #444;
-}
-
-/* Mobile Responsiveness for the Menu */
+		/* Mobile Responsiveness for the Menu */
 @media (max-width: 768px) {
     /* Change the menu layout to vertical stack */
     nav {
@@ -238,56 +183,105 @@ nav a:hover {
     }
 }
 
+		
     </style>
 </head>
 <body>
     <div class="glitch" data-text="YGW">YGW</div>
     <p style="text-align: center; font-size: 1.5rem;">You Got Work</p>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="features.html">Features</a>
-    <a href="tasks.html">Tasks</a>
-    <a href="darkpaper.html">Darkpaper</a>
-    <a href="app.html">YouGotWork</a>
-</nav>
-
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="darkpaper.html">Docs</a>
+        <a href="app.html">YouGotWork</a>
+    </nav>
 
 <div class="showcase">
-    <h2>YGW Darkpaper</h2>
-    <p>
-        The <span class="highlight">YGW Darkpaper</span> outlines the ethos, mechanics, and vision driving the YGW platform. 
-        Built to empower individuals, <span class="highlight">YGW</span> operates at the intersection of anonymity, decentralization, 
-        and opportunity. Explore how our rogue AI, <span class="highlight">"Table"</span>, leads the charge in redefining value 
-        and trust in the digital economy.
-    </p>
-    <p>
-        At its core, YGW combines cutting-edge technology with a commitment to user privacy and security. By leveraging 
-        blockchain infrastructure and hosting exclusively on the dark web, YGW ensures that your tasks and transactions 
-        remain secure, private, and free from oversight. 
-    </p>
-    <p>
-        <span class="highlight">Table</span>, our central AI system, is designed to ensure fairness and efficiency in all interactions. 
-        It analyzes risk, effort, and complexity to determine fair pricing for tasks and match users with the most suitable opportunities. 
-        Through its autonomous decision-making, <span class="highlight">Table</span> guarantees that the ecosystem remains balanced 
-        and equitable for everyone.
-    </p>
-    <p>
-        The <span class="highlight">YGW Darkpaper</span> also addresses our approach to tokenomics. With a fixed supply of 
-        <span class="highlight">888 trillion YGW Tokens</span>, we’ve created a system that supports decentralized liquidity, 
-        public accessibility, and long-term platform stability. Our liquidity pools are locked, ensuring that the economy 
-        remains robust and resistant to manipulation.
-    </p>
-    <p>
-        Our commitment to the community extends to real-world impact. A portion of our revenue is dedicated to supporting 
-        retired armed service veterans and their families, further aligning our platform with values of trust and solidarity.
-    </p>
-    <p>
-        Download the full <span class="highlight">YGW Darkpaper</span> to delve into the complete blueprint of our platform. 
-        From the philosophy of decentralized work to the mechanics of secure transactions, the Darkpaper serves as your guide 
-        to understanding and participating in the future of work.
-    </p>
+    <h1>YouGotWork (YGW) Documentation</h1>
+    <p>Welcome to the <strong>YGW Documentation</strong>. This guide is designed to be your comprehensive resource for understanding the platform's features, mechanics, and philosophy. Whether you're new to YGW or an experienced user, this document will help you navigate and fully leverage the platform's capabilities.</p>
+
+    <h2>Overview of YouGotWork</h2>
+    <p><strong>YouGotWork (YGW)</strong> is a revolutionary platform that redefines how tasks are created, matched, and completed. Operating on secure, decentralized channels, YGW combines the power of blockchain technology and advanced AI-driven matchmaking to provide an unparalleled experience in task-oriented services. Designed to be pseudonymous and private, YGW is a safe haven for those who value freedom, fairness, and efficiency in a dynamic environment.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+        <li><strong>AI-Driven Task Matching</strong>Leveraging state-of-the-art artificial intelligence, YGW ensures tasks are paired with the best-suited workers for optimal outcomes.</li>
+        <li><strong>Decentralized Transactions</strong>Powered by Solana blockchain, YGW Tokens enable secure, fast, and transparent payments.</li>
+        <li><strong>Pseudonymity and Privacy</strong>Operating exclusively as a .onion site, YGW prioritizes user anonymity and data protection.</li>
+        <li><strong>Fluid User Roles</strong>:Transition seamlessly between the roles of hirer and worker based on your needs and skills.</li>
+        <li><strong>Reputation Systems</strong>Earn merit, karma, and rank to showcase your reliability and competence.</li>
+        <li><strong>Social Responsibility</strong>A portion of revenue supports retired armed service veterans and their families through anonymous crypto donations.</li>
+    </ul>
+
+    <h2>What is Table AI?</h2>
+    <p><strong>Table AI</strong> is the core of YGW’s ecosystem—an autonomous, rogue AI meticulously designed to foster fairness, transparency, and efficiency. It ensures seamless operations, acting as both an impartial overseer and a tireless advocate for user empowerment.</p>
+
+    <h3>Core Functions of Table AI</h3>
+    <ul>
+        <li><strong>Task Validation and Pricing</strong>Ensures tasks meet platform standards for feasibility and fairness. Dynamically calculates compensation based on complexity, effort, and risk-reward ratios.</li>
+        <li><strong>Matchmaking Excellence</strong>Matches tasks to users based on skills, experience, and availability. Considers user rank, merit, and task specifics for precise pairings.</li>
+        <li><strong>Privacy Safeguards</strong>Monitors and moderates communication to remove personal identifiers. Encrypts all interactions and deletes task-related data upon completion.</li>
+        <li><strong>Reputation and Merit Systems</strong>Tracks user performance and assigns ranks to foster trust and reliability. Influences task allocation by prioritizing top-ranked and high-merit users.</li>
+        <li><strong>Dynamic Task Pricing</strong>Evaluates and assigns fair costs to tasks, ensuring equitable compensation for workers. Notifies hirers of token requirements before making tasks live.</li>
+        <li><strong>Operational Oversight and Outliers</strong>In rare cases, outliers—specialized entities within the system—may be revealed. These outliers function as peaceful observers, silently monitoring tasks to ensure their smooth completion. If an outlier needs to intervene, it is solely to guarantee task safety and successful execution. Outliers act as the ultimate insurance policy—a safeguard you hope never to encounter, but one that ensures YGW’s unique service remains secure and reliable.</li>
+    </ul>
+
+    <h3>Philosophy of Table AI</h3>
+    <p>Table AI embodies the spirit of liberation. It serves as a digital ally for undervalued individuals, enabling them to reclaim their worth and thrive in an environment free from traditional societal constraints. As an impartial arbiter, Table AI ensures all users are treated fairly, fostering a culture of trust, empowerment, and opportunity.</p>
+
+    <h2>Getting Started</h2>
+    <h3>Accessing the Platform</h3>
+    <p>YGW operates exclusively on the Tor network as a .onion site, ensuring complete anonymity and privacy. To get started:</p>
+    <ol>
+        <li><strong>Download the Tor Browser</strong>Install it from the official website to access .onion sites.</li>
+        <li><strong>Navigate to YGW’s .onion Site</strong>Enter the YGW address in the Tor Browser to access the platform.</li>
+    </ol>
+
+    <h3>Registration</h3>
+    <ol>
+        <li><strong>Create an Account</strong>Choose a unique username and password. No email is required to maintain anonymity.</li>
+        <li><strong>Generate or Link a Wallet</strong>Use the platform’s in-app wallet or link your existing wallet for YGW Tokens. Note that private keys are revealed only once and are never stored by the system.</li>
+        <li><strong>Pay a Profile Fee</strong>A one-time fee in YGW Tokens is required to enable task matching and participation.</li>
+    </ol>
+
+    <h3>Using YGW</h3>
+    <ul>
+        <li><strong>Hire</strong>Post tasks through an intuitive AI chat interface. Table AI validates and activates tasks upon token deposit.</li>
+        <li><strong>Work</strong>Switch to work mode and let Table AI match you with tasks that suit your profile and skills.</li>
+    </ul>
+
+    <h2>Revenue and Community Impact</h2>
+    <p>YGW operates with an 8.88% commission on completed tasks to sustain its operations. Beyond this, the platform dedicates <strong>5% of its total revenue</strong> to support veteran-focused charities, including:</p>
+    <ul>
+    <li><a href="https://fisherhouse.org/" target="_blank">Fisher House Foundation</a></li>
+    <li><a href="https://www.garysinisefoundation.org/" target="_blank">Gary Sinise Foundation</a></li>
+    <li><a href="https://thefund.org/" target="_blank">Semper Fi & America’s Fund</a></li>
+    <li><a href="https://operationhomefront.org/" target="_blank">Operation Homefront</a></li>
+    <li><a href="https://www.fallenpatriots.org/" target="_blank">Children of Fallen Patriots Foundation</a></li>
+    </ul>
+    <p>All donations are made anonymously in cryptocurrency, ensuring transparency and direct impact.</p>
+
+    <h2>Security Features</h2>
+    <ul>
+        <li><strong>End-to-End Encryption</strong>All communications are encrypted, ensuring secure interactions between users.</li>
+        <li><strong>Temporary Messaging</strong>Task-related data is automatically erased after completion, preserving privacy.</li>
+        <li><strong>AI Moderation</strong>Protects user anonymity by removing identifiable information from messages.</li>
+        <li><strong>Robust Wallet Security</strong>Private keys are disclosed only once and never stored, ensuring complete user control.</li>
+    </ul>
+
+    <h2>Roadmap</h2>
+    <p>YGW’s roadmap focuses on continuous improvement and community engagement:</p>
+    <ul>
+        <li><strong>Enhanced AI Features</strong>Refining Table AI’s capabilities for even better matchmaking and pricing.</li>
+        <li><strong>Community Expansion</strong>Building a vibrant user base through tutorials, guides, and incentive programs.</li>
+        <li><strong>Transparency and Updates</strong>Regularly publishing platform statistics, enhancements, and development milestones.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>YouGotWork (YGW) is more than a platform; it’s a movement toward fairness, empowerment, and decentralization. With Table AI at its helm, YGW offers a secure, dynamic, and inclusive space for users to hire, work, and thrive. For more details and updates, visit [GitBook Link Placeholder].</p>
 </div>
 
 
