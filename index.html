@@ -5,7 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YGW: You Got Work</title>
     <style>
-        body {
+/* General mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .form-container input,
+    .form-container button {
+        width: 100%;
+    }
+
+    #dashboard {
+        padding: 20px;
+    }
+
+    #dashboardUsername,
+    #dashboardWallet {
+        word-wrap: break-word;
+        font-size: 14px;
+    }
+
+    /* Adjust buttons */
+    button {
+        width: 100%;
+    }
+
+    .ai-chat-container {
+        width: 100%;
+    }
+
+    /* For arkanoid-specific layout adjustments */
+    .arkanoid-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .arkanoid-game {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+       
+
+	   body {
             background-color: #000000;
             color: #00FF00;
             font-family: "Courier New", Courier, monospace;
@@ -22,45 +77,14 @@
             animation: glitch-text 2s infinite;
         }
 
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 0;
-        }
-
-        .glitch::before {
-            text-shadow: 2px 0 red;
-            animation: glitch-before 2s infinite;
-        }
-
-        .glitch::after {
-            text-shadow: -2px 0 cyan;
-            animation: glitch-after 2s infinite;
-        }
-
-        @keyframes glitch-text {
-            0%, 100% { color: #00FF00; }
-            50% { color: #FF00FF; }
-        }
-
-        @keyframes glitch-before {
-            0% { transform: translate(0, 0); }
-            50% { transform: translate(-2px, -2px); }
-            100% { transform: translate(0, 0); }
-        }
-
-        @keyframes glitch-after {
-            0% { transform: translate(0, 0); }
-            50% { transform: translate(2px, 2px); }
-            100% { transform: translate(0, 0); }
-        }
-
         nav {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
+            padding: 10px 0;
+            background: linear-gradient(to bottom, #111, #000);
+            border-bottom: 2px solid #00FF00;
         }
 
         nav a {
@@ -78,10 +102,29 @@
             color: #000000;
         }
 
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #00FF00;
+        }
+
+        .game-description {
+            text-align: center;
+            margin: 20px auto;
+            color: #CCCCCC;
+            font-size: 1.2rem;
+        }
+
         .showcase {
             text-align: center;
             margin: 50px auto;
             max-width: 80%;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         .showcase h2 {
@@ -93,10 +136,12 @@
             font-size: 1.2rem;
             line-height: 1.6;
             color: #CCCCCC;
+            margin-bottom: 20px;
         }
 
         .highlight {
             color: #FF00FF;
+            font-weight: bold;
         }
 
         footer {
@@ -111,24 +156,289 @@
             color: #00FF00;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         footer a:hover {
             color: #FF00FF;
         }
+		/* Arkanoid page responsive styles */
+@media (max-width: 768px) {
+    /* Center the Arkanoid game */
+    .arkanoid-container {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Adjust the size of the game area on smaller screens */
+    .arkanoid-game {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* Adjust the controls or buttons under the game */
+    .arkanoid-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .arkanoid-controls button {
+        margin: 0 5px;
+        width: 100px;
+    }
+}
+/* Make the menu responsive */
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        margin: 5px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .menu a:hover {
+        background-color: #444;
+    }
+}
+/* General Nav Styling */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+/* Mobile Responsiveness for the Menu */
+@media (max-width: 768px) {
+    /* Change the menu layout to vertical stack */
+    nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    /* Make links take full width on smaller screens */
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust the font size for very small screens */
+    nav a {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
     </style>
 </head>
 <body>
     <div class="glitch" data-text="YGW">YGW</div>
     <p style="text-align: center; font-size: 1.5rem;">You Got Work</p>
 
-    <nav>
-        <a href="about.html">About</a>
-        <a href="features.html">Features</a>
-        <a href="tasks.html">Tasks</a>
-        <a href="darkpaper.html">Darkpaper</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="features.html">Features</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="darkpaper.html">Darkpaper</a>
+    <a href="app.html">YouGotWork</a>
+</nav>
+
+
+    <div class="game-description">
+        <p>Play the game to contribute to the YGW encryption system! By paying into the platform, you enhance the system's 
+        <span class="highlight">True RNG</span>, ensuring ultimate security and decentralization.</p>
+    </div>
+
+    <canvas id="arkanoidGame" width="400" height="300"></canvas>
+
+    <script>
+        const canvas = document.getElementById("arkanoidGame");
+        const ctx = canvas.getContext("2d");
+
+        // Game Variables
+        let ballX = canvas.width / 2;
+        let ballY = canvas.height - 30;
+        let ballDX = 2;
+        let ballDY = -2;
+        const ballRadius = 10;
+
+        let paddleHeight = 10;
+        let paddleWidth = 75;
+        let paddleX = (canvas.width - paddleWidth) / 2;
+
+        let rightPressed = false;
+        let leftPressed = false;
+
+        // Bricks
+        const brickRowCount = 3;
+        const brickColumnCount = 5;
+        const brickWidth = 70;
+        const brickHeight = 20;
+        const brickPadding = 10;
+        const brickOffsetTop = 30;
+        const brickOffsetLeft = 30;
+        let bricks = [];
+
+        for (let c = 0; c < brickColumnCount; c++) {
+            bricks[c] = [];
+            for (let r = 0; r < brickRowCount; r++) {
+                bricks[c][r] = { x: 0, y: 0, status: 1 };
+            }
+        }
+
+        // Controls
+        document.addEventListener("keydown", keyDownHandler);
+        document.addEventListener("keyup", keyUpHandler);
+
+        function keyDownHandler(e) {
+            if (e.key === "Right" || e.key === "ArrowRight") {
+                rightPressed = true;
+            } else if (e.key === "Left" || e.key === "ArrowLeft") {
+                leftPressed = true;
+            }
+        }
+
+        function keyUpHandler(e) {
+            if (e.key === "Right" || e.key === "ArrowRight") {
+                rightPressed = false;
+            } else if (e.key === "Left" || e.key === "ArrowLeft") {
+                leftPressed = false;
+            }
+        }
+
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+            ctx.fillStyle = "#00FF00";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "#00FF00";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function drawBricks() {
+            for (let c = 0; c < brickColumnCount; c++) {
+                for (let r = 0; r < brickRowCount; r++) {
+                    if (bricks[c][r].status === 1) {
+                        const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+                        const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        ctx.beginPath();
+                        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                        ctx.fillStyle = "#00FF00";
+                        ctx.fill();
+                        ctx.closePath();
+                    }
+                }
+            }
+        }
+
+        function collisionDetection() {
+            for (let c = 0; c < brickColumnCount; c++) {
+                for (let r = 0; r < brickRowCount; r++) {
+                    const b = bricks[c][r];
+                    if (b.status === 1) {
+                        if (
+                            ballX > b.x &&
+                            ballX < b.x + brickWidth &&
+                            ballY > b.y &&
+                            ballY < b.y + brickHeight
+                        ) {
+                            ballDY = -ballDY;
+                            b.status = 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBricks();
+            drawBall();
+            drawPaddle();
+            collisionDetection();
+
+            if (ballX + ballDX > canvas.width - ballRadius || ballX + ballDX < ballRadius) {
+                ballDX = -ballDX;
+            }
+            if (ballY + ballDY < ballRadius) {
+                ballDY = -ballDY;
+            } else if (ballY + ballDY > canvas.height - ballRadius) {
+                if (ballX > paddleX && ballX < paddleX + paddleWidth) {
+                    ballDY = -ballDY;
+                } else {
+                    document.location.reload();
+                }
+            }
+
+            if (rightPressed && paddleX < canvas.width - paddleWidth) {
+                paddleX += 7;
+            } else if (leftPressed && paddleX > 0) {
+                paddleX -= 7;
+            }
+
+            ballX += ballDX;
+            ballY += ballDY;
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+		// Simulate RNG generation for encryption
+function generateRNG() {
+    const rngNumbers = [];
+    for (let i = 0; i < 10; i++) {
+        rngNumbers.push(Math.floor(Math.random() * 10000)); // Generate a pseudo-random number
+    }
+    console.log("Generated RNG numbers for system encryption:", rngNumbers);
+}
+
+// Trigger RNG generation every 5 seconds during gameplay
+setInterval(() => {
+    generateRNG();
+}, 5000);
+
+    </script>
 
     <div class="showcase">
         <h2>Welcome to YGW</h2>

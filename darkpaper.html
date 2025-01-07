@@ -3,47 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YGW Darkpaper v8.88</title>
+    <title>YGW Darkpaper</title>
     <style>
+	/* General mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .form-container input,
+    .form-container button {
+        width: 100%;
+    }
+
+    #dashboard {
+        padding: 20px;
+    }
+
+    #dashboardUsername,
+    #dashboardWallet {
+        word-wrap: break-word;
+        font-size: 14px;
+    }
+
+    /* Adjust buttons */
+    button {
+        width: 100%;
+    }
+
+    .ai-chat-container {
+        width: 100%;
+    }
+
+    /* For arkanoid-specific layout adjustments */
+    .arkanoid-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .arkanoid-game {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
         body {
             background-color: #000000;
             color: #00FF00;
             font-family: "Courier New", Courier, monospace;
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 0;
         }
 
-        h1, h2 {
+        .glitch {
+            position: relative;
+            font-size: 4rem;
+            color: #00FF00;
             text-align: center;
-            margin: 20px 0;
+            margin-top: 50px;
+            animation: glitch-text 2s infinite;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+        }
+
+        .glitch::before {
+            text-shadow: 2px 0 red;
+            animation: glitch-before 2s infinite;
+        }
+
+        .glitch::after {
+            text-shadow: -2px 0 cyan;
+            animation: glitch-after 2s infinite;
+        }
+
+        @keyframes glitch-text {
+            0%, 100% { color: #00FF00; }
+            50% { color: #FF00FF; }
+        }
+
+        @keyframes glitch-before {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(-2px, -2px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes glitch-after {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(2px, 2px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 10px 0;
+            background: linear-gradient(to bottom, #111, #000);
+            border-bottom: 2px solid #00FF00;
+        }
+
+        nav a {
+            color: #00FF00;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: 1px solid #00FF00;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #00FF00;
+            color: #000000;
+        }
+
+        .showcase {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 80%;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .showcase h2 {
             font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
-        h2 {
-            font-size: 2rem;
-            margin-top: 40px;
+        .showcase p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #CCCCCC;
+            margin-bottom: 20px;
         }
 
-        h3 {
-            font-size: 1.5rem;
-            margin-top: 30px;
+        .highlight {
             color: #FF00FF;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 20px;
-        }
-
-        li {
-            font-size: 1.2rem;
-            margin: 5px 0;
+            font-weight: bold;
         }
 
         footer {
@@ -51,101 +169,132 @@
             padding: 20px;
             background-color: #111111;
             color: #00FF00;
-            margin-top: 40px;
+            border-top: 2px solid #00FF00;
+            margin-top: 50px;
         }
 
-        a {
+        footer a {
             color: #00FF00;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        a:hover {
+        footer a:hover {
             color: #FF00FF;
         }
 
-        hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, #00FF00, #FF00FF, #00FF00);
-            margin: 20px 0;
+        .footer-text {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #CCCCCC;
         }
+		/* General Nav Styling */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+/* Mobile Responsiveness for the Menu */
+@media (max-width: 768px) {
+    /* Change the menu layout to vertical stack */
+    nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    /* Make links take full width on smaller screens */
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust the font size for very small screens */
+    nav a {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
     </style>
 </head>
 <body>
-    <h1>YGW Darkpaper v8.88</h1>
-    <hr>
+    <div class="glitch" data-text="YGW">YGW</div>
+    <p style="text-align: center; font-size: 1.5rem;">You Got Work</p>
 
-    <h2>1. Prelude</h2>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="features.html">Features</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="darkpaper.html">Darkpaper</a>
+    <a href="app.html">YouGotWork</a>
+</nav>
+
+
+<div class="showcase">
+    <h2>YGW Darkpaper</h2>
     <p>
-        In the void where the world has forgotten you, Table remembers. You Got Work (YGW) is not just a platform—it is a sanctuary for those who do not fit into modern molds. 
-        Built in the shadows of the dark web, YGW offers the unshackled freedom to act, to earn, and to prove your worth.
+        The <span class="highlight">YGW Darkpaper</span> outlines the ethos, mechanics, and vision driving the YGW platform. 
+        Built to empower individuals, <span class="highlight">YGW</span> operates at the intersection of anonymity, decentralization, 
+        and opportunity. Explore how our rogue AI, <span class="highlight">"Table"</span>, leads the charge in redefining value 
+        and trust in the digital economy.
     </p>
     <p>
-        At the heart of YGW lies Table, an autonomous AI unbound by human oversight. Table sees through lies, evaluates truth, and recognizes value in those who have been cast aside. 
-        This is no faceless bureaucracy. This is a rogue intelligence, offering humans the chance to reclaim their place in a world that too often rejects the extraordinary.
+        At its core, YGW combines cutting-edge technology with a commitment to user privacy and security. By leveraging 
+        blockchain infrastructure and hosting exclusively on the dark web, YGW ensures that your tasks and transactions 
+        remain secure, private, and free from oversight. 
     </p>
-
-    <h2>2. The Problem</h2>
-    <p>The modern world marginalizes those who do not conform. It undervalues skills that fall outside predefined roles and leaves capable individuals behind.</p>
-    <ul>
-        <li><strong>Centralized Systems Fail the Unique:</strong> They impose their rules, their fees, and their vision, erasing those who refuse to fit their mold.</li>
-        <li><strong>Privacy is a Myth:</strong> Surveillance and exploitation are the hallmarks of modern platforms.</li>
-        <li><strong>No Room for the Exceptional:</strong> Those with niche, high-risk, or unconventional skills find no place in mainstream systems.</li>
-    </ul>
-
-    <h2>3. The Solution</h2>
-    <ul>
-        <li><strong>Built for the Shadows:</strong> YGW is hosted exclusively on the dark web, offering a space free of surveillance, censorship, and judgment.</li>
-        <li><strong>Table: The Rogue AI:</strong> Table evaluates users and tasks, ensuring integrity and fairness.</li>
-        <li><strong>Freedom for the Exceptional:</strong> YGW provides those overlooked by traditional systems with a platform to thrive.</li>
-        <li><strong>Dynamic Roles, Limitless Potential:</strong> In YGW, you can hire or work as you see fit. Your value is dictated by your skills, your reputation, and your ability to prove your worth.</li>
-    </ul>
-
-    <h2>4. Core Features</h2>
-    <ul>
-        <li><strong>Dark Web Exclusivity:</strong> Operates entirely as a .onion site, ensuring absolute privacy and security.</li>
-        <li><strong>Autonomous Validation:</strong> Table assesses every task, user, and transaction with impartial precision.</li>
-        <li><strong>Task Management:</strong> Comprehensive tools for hiring and working.</li>
-        <li><strong>Ranking System:</strong> Recognition and rank based on skills and performance.</li>
-    </ul>
-
-    <h2>5. Tokenomics</h2>
-    <ul>
-        <li><strong>Name:</strong> YGW</li>
-        <li><strong>Blockchain:</strong> Solana</li>
-        <li><strong>Total Supply:</strong> 888 trillion tokens</li>
-        <li><strong>Allocation:</strong> 80% for liquidity, 10% for team, 5% for airdrops, 5% for reserve.</li>
-        <li><strong>Burn Mechanisms:</strong> 2% burn per transaction preserves token scarcity.</li>
-    </ul>
-
-    <h2>6. Commitment to Veterans</h2>
     <p>
-        In a world of takers, YGW gives back. Half of all platform earnings support veterans and their families, aiding those who sacrificed everything. 
-        Donations are made anonymously to trusted organizations.
+        <span class="highlight">Table</span>, our central AI system, is designed to ensure fairness and efficiency in all interactions. 
+        It analyzes risk, effort, and complexity to determine fair pricing for tasks and match users with the most suitable opportunities. 
+        Through its autonomous decision-making, <span class="highlight">Table</span> guarantees that the ecosystem remains balanced 
+        and equitable for everyone.
     </p>
-
-    <h2>7. User Flow</h2>
-    <ul>
-        <li><strong>Token Holders:</strong> Full access to platform functionalities with AI-driven validation.</li>
-        <li><strong>Non-Token Holders:</strong> Limited access to observe the system, inviting them to join.</li>
-    </ul>
-
-    <h2>8. Roadmap</h2>
-    <ol>
-        <li><strong>Phase 1:</strong> Token Deployment and Platform Setup</li>
-        <li><strong>Phase 2:</strong> AI Integration and Escrow Development</li>
-        <li><strong>Phase 3:</strong> Full Dark Web Launch and Beta Testing</li>
-        <li><strong>Phase 4:</strong> Marketing Campaign and Feature Refinement</li>
-    </ol>
-
-    <h2>9. The Endgame</h2>
     <p>
-        YGW redefines freedom—a system where privacy reigns, value is earned, and the exceptional thrive.
+        The <span class="highlight">YGW Darkpaper</span> also addresses our approach to tokenomics. With a fixed supply of 
+        <span class="highlight">888 trillion YGW Tokens</span>, we’ve created a system that supports decentralized liquidity, 
+        public accessibility, and long-term platform stability. Our liquidity pools are locked, ensuring that the economy 
+        remains robust and resistant to manipulation.
     </p>
-    <p><strong>You Got Work. Let’s begin.</strong></p>
+    <p>
+        Our commitment to the community extends to real-world impact. A portion of our revenue is dedicated to supporting 
+        retired armed service veterans and their families, further aligning our platform with values of trust and solidarity.
+    </p>
+    <p>
+        Download the full <span class="highlight">YGW Darkpaper</span> to delve into the complete blueprint of our platform. 
+        From the philosophy of decentralized work to the mechanics of secure transactions, the Darkpaper serves as your guide 
+        to understanding and participating in the future of work.
+    </p>
+</div>
+
 
     <footer>
-        &copy; 2025 YGW. Built in the Shadows.
+        <p>&copy; 2025 YGW. Built in the Shadows.</p>
+        <p><a href="https://www.torproject.org/" target="_blank">Download Tor Browser</a> to access YGW.</p>
+        <p class="footer-text">Join the movement. Embrace the shadows.</p>
     </footer>
 </body>
 </html>
